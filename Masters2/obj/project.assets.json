@@ -2339,19 +2339,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ЕлшерифАлиСаадАлиБай\\.nuget\\packages\\": {}
+    "C:\\Users\\abood\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\my\\study\\Learn to code\\platform\\asp.net\\MasterApp\\Masters\\Masters2\\Masters2\\Masters2.csproj",
+      "projectUniqueName": "C:\\Users\\abood\\Source\\Repos\\Masters2\\Masters2\\Masters2.csproj",
       "projectName": "Masters2",
-      "projectPath": "H:\\my\\study\\Learn to code\\platform\\asp.net\\MasterApp\\Masters\\Masters2\\Masters2\\Masters2.csproj",
-      "packagesPath": "C:\\Users\\ЕлшерифАлиСаадАлиБай\\.nuget\\packages\\",
-      "outputPath": "H:\\my\\study\\Learn to code\\platform\\asp.net\\MasterApp\\Masters\\Masters2\\Masters2\\obj\\",
+      "projectPath": "C:\\Users\\abood\\Source\\Repos\\Masters2\\Masters2\\Masters2.csproj",
+      "packagesPath": "C:\\Users\\abood\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\abood\\Source\\Repos\\Masters2\\Masters2\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ЕлшерифАлиСаадАлиБай\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\abood\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2359,6 +2364,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2407,24 +2413,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2433,7 +2421,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
