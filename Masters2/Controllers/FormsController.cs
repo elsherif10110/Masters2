@@ -2,11 +2,11 @@
 
 namespace Masters2.Controllers
 {
-    public class FormsController : Controller
-    {
-        public IActionResult Question()
-        {
-            return View();
-        }
-    }
+    //public class FormsController : Controller
+    //{
+    //    //public IActionResult Question()
+    //    //{
+    //    //    //return View();
+    //    //}
+    //}
 }
