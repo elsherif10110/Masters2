@@ -1,0 +1,40 @@
+﻿@model Category
+
+@* @model List<Masters.Models.List>
+
+ *@ 
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Edit User</h1>
+
+<hr />
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Default form</h4>
+        <p class="card-description"> Basic form layout </p>
+        <form class="forms-sample" method="post" enctype="multipart/form-data"
+              asp-controller="Categories" asp-action="Save" role="form">
+            <input asp-for="CategoryId" type="hidden" />
+            <div class="form-group">
+                <label for="exampleInputUsername1"></label>
+                <input asp-for="CategoryName" type="text" class="form-control" placeholder="Category Name">
+                <span asp-validation-for="CategoryName"></span>
+            </div>
+
+            <button type="submit" formmethod="post" class="btn btn-gradient-primary me-2"> Save </button>
+            <button class="btn btn-light"></button>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

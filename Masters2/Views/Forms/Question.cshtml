@@ -1,0 +1,85 @@
+﻿<form id="questionForm">
+    <label for="categoryId">Category:</label>
+    <input type="text" id="categoryId" name="categoryId" required>
+
+    <div id="questionsContainer">
+        <!-- This container will hold the dynamically added questions -->
+    </div>
+
+    <button type="button" onclick="addQuestion()">Add Question</button>
+    <button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+<script>
+    var questionsByCategory = {}; // Dictionary to track questions per category
+
+    function addQuestion() {
+        var categoryId = document.getElementById('categoryId').value;
+
+        if (!questionsByCategory[categoryId]) {
+            questionsByCategory[categoryId] = [];
+        }
+
+        var questionsForCategory = questionsByCategory[categoryId];
+        var questionIndex = questionsForCategory.length + 1;
+
+        var questionsContainer = document.getElementById('questionsContainer');
+
+        var label = document.createElement('label');
+        label.textContent = 'Question ' + questionIndex + ':';
+
+        var input = document.createElement('input');
+        input.type = 'text';
+        input.name = categoryId + '_question' + questionIndex;
+        input.required = true;
+
+        var deleteButton = document.createElement('button');
+        deleteButton.type = 'button';
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = function () {
+            deleteQuestion(categoryId, questionIndex);
+        };
+
+        questionsForCategory.push({ label, input, deleteButton });
+
+        questionsContainer.appendChild(label);
+        questionsContainer.appendChild(input);
+        questionsContainer.appendChild(deleteButton);
+        questionsContainer.appendChild(document.createElement('br'));
+    }
+
+    function deleteQuestion(categoryId, questionIndex) {
+        var questionsForCategory = questionsByCategory[categoryId];
+        questionsForCategory.splice(questionIndex - 1, 1); // Remove the question
+
+        var questionsContainer = document.getElementById('questionsContainer');
+        questionsContainer.innerHTML = ''; // Clear the container
+
+        questionsForCategory.forEach(function (question, index) {
+            question.label.textContent = 'Question ' + (index + 1) + ':';
+            questionsContainer.appendChild(question.label);
+            questionsContainer.appendChild(question.input);
+            questionsContainer.appendChild(question.deleteButton);
+            questionsContainer.appendChild(document.createElement('br'));
+        });
+    }
+
+    function submitForm() {
+        var form = document.getElementById('questionForm');
+        var formData = new FormData(form);
+
+        fetch('/Forms/AddQuestions', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                // Handle response if needed
+                console.log(data);
+            })
+            .catch(error => {
+                // Handle error if any
+                console.error('Error:', error);
+            });
+    }
+</script>

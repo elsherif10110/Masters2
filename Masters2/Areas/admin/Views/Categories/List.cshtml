@@ -1,0 +1,103 @@
+﻿@model List<Masters2.Models.Category>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@section Style{
+    <link rel="stylesheet" href="~/Admin/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+}
+
+<!-- partial -->
+<div class="container-fluid page-body-wrapper">
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="page-title">
+                    <a href="Edit" class="btn btn-gradient-info">NEW</a>
+                </h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data table</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Data table</h4>
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="order-listing_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                    <div class="col-sm-12">
+                                        <table id="order-listing" class="table dataTable no-footer" aria-describedby="order-listing_info">
+                                            <thead>
+                                                <tr>
+                                                    <th>Id</th>
+                                                <th class="sortStyle">Category Name<i class="mdi mdi-chevron-down"></i></th>
+                                                    <th class="sortStyle">Action<i class="mdi mdi-chevron-down"></i></th> 
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            @foreach (var cat in Model)
+                                            {
+                                                <tr style="margin:0px;padding:0px;">
+                                                    <td class="col-md-8">@cat.CategoryId</td>
+
+                                                    <td class="col-md-8">@cat.CategoryName</td>
+                                                    <td class="col-md-4" style="margin:0px;padding:0px;">
+                                                        <a style="height:max-content"
+                                                           asp-controller="Categories" asp-action="Edit" asp-route-Id="@cat.CategoryId"
+                                                           class="btn btn-info btn-fw">Edit</a>
+
+                                                        <a asp-controller="Categories" asp-action="Delete" asp-route-Id="@cat.CategoryId"
+                                                           class="btn btn-danger btn-fw"
+                                                           onclick="return confirm(" Are you sure");">Delete</a>
+                                                    </td>
+                                                </tr>
+                                                    } 
+                                            </tbody>
+                                        </table>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- content-wrapper ends -->
+        @section Scripts{
+        <script src="~/Admin/assets/vendors/js/vendor.bundle.base.js"></script>
+
+
+        <script src="~/Admin/assets/vendors/datatables.net/jquery.dataTables.js"></script>
+        <script src="~/Admin/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+        <!-- End plugin js for this page -->
+        <!-- Custom js for this page -->
+        <script src="~/Admin/assets/js/data-table.js"></script>
+        <!-- End custom js for this page -->
+        }
+
+
+
+
+
+
+
+
+
+            @* <tr style="margin:0px;padding:0px;">
+            <td class="col-md-8">@cat.CategoryName</td>
+            <td class="col-md-4" style="margin:0px;padding:0px;">
+            <a style="height:max-content"
+            asp-controller="Categories" asp-action="Edit" asp-route-Id="@cat.CategoryId"
+            class="btn btn-info btn-fw">Edit</a>
+
+
+            <a asp-controller="Categories" asp-action="Delete" asp-route-Id="@cat.CategoryId"
+            class="btn btn-danger btn-fw"
+            onclick="return confirm(" Are you sure");">Delete</a>
+            </td>
+            </tr> *@
