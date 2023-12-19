@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//using Microsoft.AspNetCore.Mvc;
 
-namespace Masters2.Controllers
-{
-    public class FormsController : Controller
-    {
-        public IActionResult Question()
-        {
-            return View();
-        }
-    }
-}
+//namespace Masters2.Controllers
+//{
+//    public class FormsController : Controller
+//    {
+//        public IActionResult Question()
+//        {
+//            return View();
+//        }
+//    }
+//}
