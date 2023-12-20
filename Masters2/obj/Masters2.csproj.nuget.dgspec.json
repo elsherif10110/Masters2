@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abood\\Source\\Repos\\Masters2\\Masters2\\Masters2.csproj": {}
+    "C:\\Users\\abood\\source\\repos\\Masters2\\Masters2\\Masters2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abood\\Source\\Repos\\Masters2\\Masters2\\Masters2.csproj": {
+    "C:\\Users\\abood\\source\\repos\\Masters2\\Masters2\\Masters2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abood\\Source\\Repos\\Masters2\\Masters2\\Masters2.csproj",
+        "projectUniqueName": "C:\\Users\\abood\\source\\repos\\Masters2\\Masters2\\Masters2.csproj",
         "projectName": "Masters2",
-        "projectPath": "C:\\Users\\abood\\Source\\Repos\\Masters2\\Masters2\\Masters2.csproj",
+        "projectPath": "C:\\Users\\abood\\source\\repos\\Masters2\\Masters2\\Masters2.csproj",
         "packagesPath": "C:\\Users\\abood\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abood\\Source\\Repos\\Masters2\\Masters2\\obj\\",
+        "outputPath": "C:\\Users\\abood\\source\\repos\\Masters2\\Masters2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages"

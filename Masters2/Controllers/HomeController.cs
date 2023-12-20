@@ -6,6 +6,7 @@ namespace Masters2.Controllers
 {
     public class HomeController : Controller
     {
+        
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -13,6 +14,27 @@ namespace Masters2.Controllers
             _logger = logger;
         }
 
+        ////////////////////// فقط لتجربة حفظ الأسئلة/
+        string[] GetQustionById(string Text, string Sep)
+        {
+
+            string[] Qustions = { };
+
+            Qustions = Text.Split(Sep);
+
+            return Qustions;
+        }
+        public IActionResult YourAction(string qustions)
+        {
+
+            ViewFormModel model = new ViewFormModel();
+
+            model.QustinosList = GetQustionById(qustions, "/").ToList();
+
+
+            return RedirectToAction("AddQustionsForm");
+        }
+        //////////////////////////////////////////////////////
         public IActionResult Index()
         {
             return View();

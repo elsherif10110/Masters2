@@ -19,7 +19,7 @@ namespace Masters2.Controllers
             ClsBLQuestion question = new ClsBLQuestion();
             ViewFormModel modelView = new ViewFormModel();
 
-            modelView.QustinosList = question.GetQustionsById(1);
+            modelView.QustinosList = question.GetQustionsById(3);
 
             modelView.AnswersList = new List<string>(new string[modelView.QustinosList.Count]);
 
@@ -28,27 +28,28 @@ namespace Masters2.Controllers
         ///Hello Iam Edit
         ///
 
-        public IActionResult btnSaveUserAnswer(ViewFormModel model)
+        public IActionResult btnSaveUserQustions(string qustionsRecord)
         {
-            ClsBLAnswers answer = new ClsBLAnswers();
 
-            string alls = string.Empty;
+            ClsBLQuestion qustions = new ClsBLQuestion();
+            ClsTbCategories categories = new ClsTbCategories();
+            
 
-            for (int i = 0; i < model.AnswersList.Count; i++)
-            {
-                if (i != model.AnswersList.Count - 1)
-                {
-                    model.AnswerRecord += model.AnswersList[i] + " #//# ";
-                }
-                else
-                {
-                    model.AnswerRecord += model.AnswersList[i];
-                }
-            }
+            string categoryName = categories.GetCategoryFromQustionRecord(qustionsRecord);
 
-            alls = model.AnswerRecord.Trim();
 
-            answer.Save(model);
+
+            categories.Save(categoryName);
+            qustions.Save(qustionsRecord);
+
+            return RedirectToAction("");
+        }
+
+
+        public IActionResult btnSaveUserAnswers(ViewFormModel qustionsRecord)
+        {
+
+           
 
             return RedirectToAction("");
         }

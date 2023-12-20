@@ -1,4 +1,158 @@
-﻿<form id="questionForm">
+﻿
+
+
+
+
+
+
+
+
+    <label for="categoryId">Category:</label>
+    <input type="text" id="categoryId" name="categoryId" class="itemInput" required>
+
+    <div id="questionsContainer">
+        <!-- This container will hold the dynamically added questions -->
+    </div>
+
+
+    <button type="button" onclick="addQuestion()">Add Item</button>
+    <button type="button" onclick="submitItems()">Submit</button>
+
+
+
+
+
+
+<script>
+    var questionsByCategory = {}; // Dictionary to track questions per category
+
+    function addQuestion() {
+        var categoryId = document.getElementById('categoryId').value;
+
+        if (!questionsByCategory[categoryId]) {
+            questionsByCategory[categoryId] = [];
+        }
+
+        var questionsForCategory = questionsByCategory[categoryId];
+        var questionIndex = questionsForCategory.length + 1;
+
+        var questionsContainer = document.getElementById('questionsContainer');
+
+        var label = document.createElement('label');
+        label.textContent = 'Question ' + questionIndex + ':';
+
+        var input = document.createElement('input');
+        input.type = 'text';
+        input.name = categoryId + '_question' + questionIndex;
+        input.className = 'itemInput';
+        input.required = true;
+
+        var deleteButton = document.createElement('button');
+        deleteButton.type = 'button';
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = function () {
+            deleteQuestion(categoryId, questionIndex);
+        };
+
+        questionsForCategory.push({ label, input, deleteButton });
+
+        questionsContainer.appendChild(label);
+        questionsContainer.appendChild(input);
+        questionsContainer.appendChild(deleteButton);
+        questionsContainer.appendChild(document.createElement('br'));
+    }
+
+    function deleteQuestion(categoryId, questionIndex) {
+        var questionsForCategory = questionsByCategory[categoryId];
+        questionsForCategory.splice(questionIndex - 1, 1); // Remove the question
+
+        var questionsContainer = document.getElementById('questionsContainer');
+        questionsContainer.innerHTML = ''; // Clear the container
+
+        questionsForCategory.forEach(function (question, index) {
+            question.label.textContent = 'Question ' + (index + 1) + ':';
+            questionsContainer.appendChild(question.label);
+            questionsContainer.appendChild(question.input);
+            questionsContainer.appendChild(question.deleteButton);
+            questionsContainer.appendChild(document.createElement('br'));
+        });
+    }
+
+    function submitForm() {
+        var form = document.getElementById('questionForm');
+        var formData = new FormData(form);
+
+        fetch('/Forms/AddQuestions', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                // Handle response if needed
+                console.log(data);
+            })
+            .catch(error => {
+                // Handle error if any
+                console.error('Error:', error);
+            });
+    }
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function addItem() {
+        // Your logic to add input fields for each item dynamically to 'questionsContainer'
+        var newItem = '<br/> <input type="text" class="itemInput" /> <br/> <hr/>';
+        $('#questionsContainer').append(newItem);
+    }
+
+
+    function submitItems() {
+        var itemsList = [];
+
+
+        // Loop through each input field and collect the values
+        $('.itemInput').each(function () {
+            itemsList.push($(this).val());
+        });
+
+        console.log(itemsList);
+        var qustionsRecord = itemsList.join('/*/'); // concatenate elements with comma and space
+
+        console.log(qustionsRecord);
+        alert(qustionsRecord);
+
+        window.location.href = "/Forms/btnSaveUserAnswer?qustionsRecord=" + qustionsRecord;
+    }
+
+
+ 
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* 
+
+
+
+<form id="questionForm">
     <label for="categoryId">Category:</label>
     <input type="text" id="categoryId" name="categoryId" required>
 
@@ -9,6 +163,11 @@
     <button type="button" onclick="addQuestion()">Add Question</button>
     <button type="button" onclick="submitForm()">Submit</button>
 </form>
+
+
+
+
+
 
 <script>
     var questionsByCategory = {}; // Dictionary to track questions per category
@@ -83,3 +242,4 @@
             });
     }
 </script>
+ *@

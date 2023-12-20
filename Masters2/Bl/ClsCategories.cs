@@ -33,20 +33,23 @@ namespace Masters2.Bl
             }
         }
 
-        public bool Save(TbCategory TbCategory)
+        public bool Save(string categoryName)
         {
             try
             {
                 Masters2Context context = new Masters2Context();
+                TbCategory category = new TbCategory();
 
-                if (TbCategory.CategoryId == 0)
+                category.CategoryName = categoryName;
+
+                if (category.CategoryId == 0)
                 {
-                    context.TbCategories.Add(TbCategory);
+                    context.TbCategories.Add(category);
                 }
                 else
                 {
-                    context.Entry(TbCategory).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-                    context.TbCategories.Update(TbCategory);
+                    context.Entry(category).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                    context.TbCategories.Update(category);
                 }
                 context.SaveChanges();
                 return true;
@@ -55,6 +58,19 @@ namespace Masters2.Bl
             {
                 return false;
             }
+        }
+
+        public string GetCategoryFromQustionRecord(string qustionsRecord)
+        {
+            string category = string.Empty;
+
+            List<string> qustionsList = new List<string>();
+
+            qustionsList = qustionsRecord.Split("/*/").ToList();
+
+            category = qustionsList[0];
+
+            return category;
         }
 
         public bool Dekete(int id)

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Masters2",
+    "\\Masters2\\Bl"
   ],
-  "SelectedNode": "\\Masters2.sln",
+  "SelectedNode": "\\Masters2\\Bl\\ClsBLQuestion.cs",
   "PreviewInSolutionExplorer": false
 }
