@@ -3,9 +3,10 @@
     "",
     "\\Masters2",
     "\\Masters2\\Bl",
+    "\\Masters2\\Controllers",
     "\\Masters2\\Views",
     "\\Masters2\\Views\\Forms"
   ],
-  "SelectedNode": "\\Masters2\\Views\\Forms\\Question.cshtml",
+  "SelectedNode": "\\Masters2\\Controllers\\FormsController.cs",
   "PreviewInSolutionExplorer": false
 }
