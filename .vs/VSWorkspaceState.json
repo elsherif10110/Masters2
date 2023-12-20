@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Masters2",
-    "\\Masters2\\Bl"
+    "\\Masters2\\Bl",
+    "\\Masters2\\Views",
+    "\\Masters2\\Views\\Forms"
   ],
-  "SelectedNode": "\\Masters2\\Bl\\ClsBLQuestion.cs",
+  "SelectedNode": "\\Masters2\\Views\\Forms\\Question.cshtml",
   "PreviewInSolutionExplorer": false
 }
