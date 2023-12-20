@@ -1,76 +1,76 @@
-﻿//using Masters2.Models;
+﻿using Masters2.Models;
 
-//namespace Masters2.Bl
-//{
-//    public class ClsCategories
-//    {
-//        public List<Category> GetAll()
-//        {
-//            try
-//            {
-//                FormManagementContext context = new FormManagementContext();
-//                var lstCategory = context.Categories.ToList();
-//                return lstCategory;
+namespace Masters2.Bl
+{
+    public class ClsTbCategories
+    {
+        public List<TbCategory> GetAll()
+        {
+            try
+            {
+                Masters2Context context = new Masters2Context();
+                var lstTbCategory = context.TbCategories.ToList();
+                return lstTbCategory;
 
-//            }
-//            catch
-//            {
-//                return new List<Category>();
-//            }
-//        }
+            }
+            catch
+            {
+                return new List<TbCategory>();
+            }
+        }
 
-//        public Category GetById(int id)
-//        {
-//            try
-//            {
-//                FormManagementContext context = new FormManagementContext();
-//                var category = context.Categories.FirstOrDefault(a => a.CategoryId == id);
-//                return category;
-//            }
-//            catch
-//            {
-//                return new Category();
-//            }
-//        }
+        public TbCategory GetById(int id)
+        {
+            try
+            {
+                Masters2Context context = new Masters2Context();
+                var TbCategory = context.TbCategories.FirstOrDefault(a => a.CategoryId == id);
+                return TbCategory;
+            }
+            catch
+            {
+                return new TbCategory();
+            }
+        }
 
-//        public bool Save(Category category)
-//        {
-//            try
-//            {
-//                FormManagementContext context = new FormManagementContext();
+        public bool Save(TbCategory TbCategory)
+        {
+            try
+            {
+                Masters2Context context = new Masters2Context();
 
-//                if (category.CategoryId == 0)
-//                {
-//                    context.Categories.Add(category);
-//                }
-//                else
-//                {
-//                    context.Entry(category).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-//                    context.Categories.Update(category);
-//                }
-//                context.SaveChanges();
-//                return true;
-//            }
-//            catch
-//            {
-//                return false;
-//            }
-//        }
+                if (TbCategory.CategoryId == 0)
+                {
+                    context.TbCategories.Add(TbCategory);
+                }
+                else
+                {
+                    context.Entry(TbCategory).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                    context.TbCategories.Update(TbCategory);
+                }
+                context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
-//        public bool Dekete(int id)
-//        {
-//            try
-//            {
-//                FormManagementContext context = new FormManagementContext();
-//                var category = GetById(id);
-//                context.Categories.Remove(category);
-//                context.SaveChanges();
-//                return true;
-//            }
-//            catch
-//            {
-//                return false;
-//            }
-//        }
-//    }
-//}
+        public bool Dekete(int id)
+        {
+            try
+            {
+                Masters2Context context = new Masters2Context();
+                var TbCategory = GetById(id);
+                context.TbCategories.Remove(TbCategory);
+                context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+    }
+}

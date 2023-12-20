@@ -1,21 +1,21 @@
-﻿@* @model List<Form> *@ // تأكد من تعيين الـ Model للبيانات التي تم استرجاعها
+﻿@model ViewFormModel
 
-<table>
-    <thead>
-        <tr>
-            <th>FormId</th>
-            <th>FormData</th>
-            <!-- اضف المزيد من الأعمدة حسب البيانات التي تريد عرضها -->
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var form in Model)
-        {
-            <tr>
-                <td>@form.FormDate</td>
-                <td>@form.FormDate</td>
-                <!-- اضف البيانات الأخرى للفورم حسب الحاجة -->
-            </tr>
-        }
-    </tbody>
-</table>
+
+<form method="post" asp-controller="Forms" asp-action="btnSaveUserAnswer" role="form">
+
+    @for (var i = 0; i < Model.QustinosList.Count; i++)
+    {
+
+        <p>@Model.QustinosList[i]</p>
+        
+        <input type="text" name="AnswersList" value="@Model.AnswersList[i]" />
+        <br />
+        <hr />
+    }
+
+
+    <button type="submit" asp-controller="Forms" asp-action="btnSaveUserAnswer">Send</button>
+</form>
+
+
+
