@@ -1,8 +1,7 @@
-﻿@model Category
+﻿@model TbCategory
 
-@* @model List<Masters.Models.List>
-
- *@ 
+ 
+  
 
 @{
     ViewData["Title"] = "Index";
@@ -16,7 +15,7 @@
         <h4 class="card-title">Default form</h4>
         <p class="card-description"> Basic form layout </p>
         <form class="forms-sample" method="post" enctype="multipart/form-data"
-              asp-controller="Categories" asp-action="Save" role="form">
+              asp-controller="TbCategories" asp-action="Save" role="form">
             <input asp-for="CategoryId" type="hidden" />
             <div class="form-group">
                 <label for="exampleInputUsername1"></label>

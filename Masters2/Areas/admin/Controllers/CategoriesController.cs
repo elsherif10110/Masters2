@@ -13,35 +13,35 @@ namespace Masters.Areas.admin.Controllers
 
         public IActionResult List()
         {
-            FormManagementContext context = new FormManagementContext();
-            var lstCategories = context.Categories.ToList();
+            Masters2Context context = new Masters2Context();
+            var lstCategories = context.TbCategories.ToList();
             return View(lstCategories);
         }
         public IActionResult Edit(int? Id)
         {
-            var category = new Category();
+            var category = new TbCategory();
             if (Id != null)
             {
-                FormManagementContext context = new FormManagementContext();
-                category = context.Categories.FirstOrDefault(a => a.CategoryId == Id);
+                Masters2Context context = new Masters2Context();
+                category = context.TbCategories.FirstOrDefault(a => a.CategoryId == Id);
             }
             
             return View(category);
         }
 
         [HttpPost]
-        public IActionResult Save(Category category)
+        public IActionResult Save(TbCategory category)
         {
             //if (!ModelState.IsValid)
             //{
             //    return View("Edit", category);
             //}
 
-            using (FormManagementContext context = new FormManagementContext())
+            using (Masters2Context context = new Masters2Context())
             {
                 if (category.CategoryId == 0)
                 {
-                    context.Categories.Add(category);
+                    context.TbCategories.Add(category);
                 }
                 else
                 {
@@ -65,7 +65,7 @@ namespace Masters.Areas.admin.Controllers
 //[ValidateAntiForgeryToken]
 //public IActionResult DeleteConfirmed(int categoryId)
 //{
-//    using (FormManagementContext context = new FormManagementContext())
+//    using (Masters2Context context = new Masters2Context())
 //    {
 //        var category = context.Categories.FirstOrDefault(c => c.CategoryId == categoryId);
 
@@ -81,7 +81,7 @@ namespace Masters.Areas.admin.Controllers
 
 
 //return View("Edit", category);
-//FormManagementContext context = new FormManagementContext();
+//Masters2Context context = new Masters2Context();
 
 //if (category.CategoryId == 0)
 //{
@@ -99,6 +99,6 @@ namespace Masters.Areas.admin.Controllers
 //var category = new Category();
 //if (Id != null)
 //{
-//    FormManagementContext context = new FormManagementContext();
+//    Masters2Context context = new Masters2Context();
 //    category = context.Categories.FirstOrDefault(a => a.CategoryId == Id);
 //}

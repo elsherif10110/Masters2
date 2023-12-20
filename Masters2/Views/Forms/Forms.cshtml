@@ -1,4 +1,4 @@
-﻿@model List<Form> // تأكد من تعيين الـ Model للبيانات التي تم استرجاعها
+﻿@* @model List<Form> *@ // تأكد من تعيين الـ Model للبيانات التي تم استرجاعها
 
 <table>
     <thead>
@@ -9,13 +9,13 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var form in Model)
+        @* @foreach (var form in Model)
         {
             <tr>
                 <td>@form.FormDate</td>
                 <td>@form.FormDate</td>
                 <!-- اضف البيانات الأخرى للفورم حسب الحاجة -->
             </tr>
-        }
+        } *@
     </tbody>
 </table>
