@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lEldylorEQmA8haTCWc2UxXGUpTUOuyUwnRVcUnFIyUIyokuUyeRrGQSLj7yMsMSTiJfTiU4VRpQIkZXYzbGvQ==",
+  "dgSpecHash": "OulDmUNxLvmGzGvVDOcrizuINohosErh1jmWJSBJqzR4dC7XKaaH+/HkiPDn9jCXiL9XrimY2F852ZUkXRUnnQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ЕлшерифАлиСаадАлиБай\\source\\repos\\Masters2\\.github\\Masters2\\Masters2.csproj",
+  "projectFilePath": "H:\\my\\study\\Learn to code\\platform\\asp.net\\MasterApp\\Masters\\Masters2\\Masters2\\Masters2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ЕлшерифАлиСаадАлиБай\\.nuget\\packages\\bootstrap\\5.3.2\\bootstrap.5.3.2.nupkg.sha512",
     "C:\\Users\\ЕлшерифАлиСаадАлиБай\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

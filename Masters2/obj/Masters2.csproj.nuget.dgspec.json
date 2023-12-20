@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ЕлшерифАлиСаадАлиБай\\source\\repos\\Masters2\\.github\\Masters2\\Masters2.csproj": {}
+    "H:\\my\\study\\Learn to code\\platform\\asp.net\\MasterApp\\Masters\\Masters2\\Masters2\\Masters2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ЕлшерифАлиСаадАлиБай\\source\\repos\\Masters2\\.github\\Masters2\\Masters2.csproj": {
+    "H:\\my\\study\\Learn to code\\platform\\asp.net\\MasterApp\\Masters\\Masters2\\Masters2\\Masters2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ЕлшерифАлиСаадАлиБай\\source\\repos\\Masters2\\.github\\Masters2\\Masters2.csproj",
+        "projectUniqueName": "H:\\my\\study\\Learn to code\\platform\\asp.net\\MasterApp\\Masters\\Masters2\\Masters2\\Masters2.csproj",
         "projectName": "Masters2",
-        "projectPath": "C:\\Users\\ЕлшерифАлиСаадАлиБай\\source\\repos\\Masters2\\.github\\Masters2\\Masters2.csproj",
+        "projectPath": "H:\\my\\study\\Learn to code\\platform\\asp.net\\MasterApp\\Masters\\Masters2\\Masters2\\Masters2.csproj",
         "packagesPath": "C:\\Users\\ЕлшерифАлиСаадАлиБай\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ЕлшерифАлиСаадАлиБай\\source\\repos\\Masters2\\.github\\Masters2\\obj\\",
+        "outputPath": "H:\\my\\study\\Learn to code\\platform\\asp.net\\MasterApp\\Masters\\Masters2\\Masters2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ЕлшерифАлиСаадАлиБай\\AppData\\Roaming\\NuGet\\NuGet.Config",
