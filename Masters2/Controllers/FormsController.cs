@@ -15,22 +15,15 @@ namespace Masters2.Controllers
         }
         
 
-        public IActionResult Forms(int id)
+        public IActionResult Forms()
         {
-            ClsTbCategories clsTbCategories = new ClsTbCategories();
-            ClsBlForms forms = new ClsBlForms();
-
             ClsBLQuestion question = new ClsBLQuestion();
             VwFormsData modelView = new VwFormsData();
-            
-            TbForm form = new TbForm();
 
-            form=forms.GetById(id);
-            modelView.tbCategory= clsTbCategories.GetById(form.CategoryId);
+            modelView.QustinosList = question.GetQustionsById(12);
 
-
-            modelView.QustinosList = question.GetQustionsById(form.CategoryId);
             modelView.AnswersList = new List<string>(new string[modelView.QustinosList.Count]);
+
             return View(modelView);
         }
 

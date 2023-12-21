@@ -29,8 +29,6 @@ namespace Masters2.Controllers
             return View(categories);
         }
 
-
-
         ////////////////////// فقط لتجربة حفظ الأسئلة/
         string[] GetQustionById(string Text, string Sep)
         {
