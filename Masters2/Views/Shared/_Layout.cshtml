@@ -20,7 +20,7 @@
 <!-- Main Stylesheet -->
 
 <link href="~/Home/scss/style.min.css" rel="stylesheet" media="screen" />
-
+  
 <!--Favicon-->
 <link rel="shortcut icon" href="~/Home/images/favicon.png" type="image/x-icon">
 <link rel="icon" href="~/Home/images/favicon.png" type="image/x-icon">
@@ -60,7 +60,7 @@
 </script>
 
 <script src="~/Home/js/script.min.js"></script>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <!-- navigation -->
 <header class="navigation">
     <div class="container">
@@ -78,27 +78,33 @@
             <div class="collapse navbar-collapse text-center" id="navigation">
                 <ul class="navbar-nav mx-auto">
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Index">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        
+                    </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="features/index.html">Возможности</a>
+                        <a class="nav-link" href="#">Возможности</a>
                     </li>
 
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="blog/index.html">Блог</a>
+                        <a class="nav-link" href="#">Блог</a>
                     </li>
 
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="contact/index.html">Контакты</a>
+                        <a class="nav-link" href="#">Контакты</a>
                     </li>
 
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="faq/index.html">FAQ</a>
+                        <a class="nav-link" href="/Forms/Question">New</a>
                     </li>
 
 
@@ -106,12 +112,12 @@
 
 
 
-                <a href="/Forms/Question" class="btn btn-sm btn-primary ml-3">Приступить к работе</a>
+                <a href="/Home/List" class="btn btn-sm btn-primary ml-3">Приступить к работе</a>
 
 
 
 
-                <a href="/Users/Login">Вход</a>
+                <a href="#@* /Users/Login *@">Вход</a>
 
 
 
@@ -125,7 +131,7 @@
                         </a>
                         <div class="dropdown-menu">
 
-                            <a href="index.html" class="dropdown-item">Русский </a>
+                            <a href="#" class="dropdown-item">Русский </a>
 
                         </div>
                     </li>
@@ -157,7 +163,7 @@
                 <div class="h3 mb-4">Компания</div>
                 <ul class="list-unstyled footer-list">
 
-                    <li><a href="index.html">О компании</a></li>
+                    <li><a href="#">О компании</a></li>
 
                 </ul>
 
@@ -169,7 +175,7 @@
                 <div class="h3 mb-4">Поддержка</div>
                 <ul class="list-unstyled footer-list">
 
-                    <li><a href="faq/index.html">FAQ</a></li>
+                    <li><a href="/Forms/Question">FAQ</a></li>
 
                 </ul>
 
@@ -190,10 +196,12 @@
             </div>
         </div>
         <div class="border-top border-default text-center py-4 mt-4">
-            <small class="content">опроспро 2023 ©. Made with ❤️ in Almaty.</small>
         </div>
     </div>
 </footer>
+
+
+
 
 <!-- JS Plugins -->
 

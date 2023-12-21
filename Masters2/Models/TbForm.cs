@@ -6,7 +6,7 @@ namespace Masters2.Models
     public partial class TbForm
     {
         public int FormId { get; set; }
-        public int? CategoryId { get; set; }
+        public int CategoryId { get; set; }
         public int? QuestionId { get; set; }
         public int? AnswerId { get; set; }
         public DateTime? FormDate { get; set; }

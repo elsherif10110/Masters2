@@ -60,9 +60,13 @@ pattern: "{area:exists}/{controller=Home}/{action=Index}");
     name: "ali",
     pattern: "ali/{controller=Home}/{action=Index}/{id?}");
 
+    //endpoints.MapControllerRoute(
+    //     name: "Question",
+    //     pattern: "{controller=Forms}/{action=Question}");
+
     endpoints.MapControllerRoute(
-         name: "Question",
-         pattern: "{controller=Forms}/{action=Question}");
+    name: "Forms",
+    pattern: "{controller=Forms}/{action=Forms}/{id?}");
 }
 );
 app.Run();

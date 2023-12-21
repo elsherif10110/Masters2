@@ -1,4 +1,5 @@
-﻿using Masters2.Models;
+﻿using Masters2.Bl;
+using Masters2.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -13,6 +14,22 @@ namespace Masters2.Controllers
         {
             _logger = logger;
         }
+
+
+        public IActionResult Link()
+        {
+          
+            return View();
+        }
+
+        public IActionResult List()
+        {
+            Masters2Context ctx = new Masters2Context();
+            var categories = ctx.TbCategories.ToList();
+            return View(categories);
+        }
+
+
 
         ////////////////////// فقط لتجربة حفظ الأسئلة/
         string[] GetQustionById(string Text, string Sep)

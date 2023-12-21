@@ -9,23 +9,32 @@ namespace Masters2.Controllers
     {
         public IActionResult Question()
         {
-            
+
 
             return View();
         }
+        
 
-        public IActionResult Forms()
+        public IActionResult Forms(int id)
         {
+            ClsTbCategories clsTbCategories = new ClsTbCategories();
+            ClsBlForms forms = new ClsBlForms();
+
             ClsBLQuestion question = new ClsBLQuestion();
             VwFormsData modelView = new VwFormsData();
+            
+            TbForm form = new TbForm();
 
-            modelView.QustinosList = question.GetQustionsById(3);
+            form=forms.GetById(id);
+            modelView.tbCategory= clsTbCategories.GetById(form.CategoryId);
 
+
+            modelView.QustinosList = question.GetQustionsById(form.CategoryId);
             modelView.AnswersList = new List<string>(new string[modelView.QustinosList.Count]);
-
             return View(modelView);
         }
-   
+
+
         public IActionResult btnSaveUserQustions(string qustionsRecord)
         {
 

@@ -9,81 +9,85 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Masters2
 build_property.RootNamespace = Masters2
-build_property.ProjectDir = C:\Users\abood\source\repos\Masters2\Masters2\
+build_property.ProjectDir = C:\Users\ЕлшерифАлиСаадАлиБай\source\repos\Masters2\Masters2\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\abood\source\repos\Masters2\Masters2
+build_property.MSBuildProjectDirectory = C:\Users\ЕлшерифАлиСаадАлиБай\source\repos\Masters2\Masters2
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Areas/admin/Views/Categories/Edit.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Areas/admin/Views/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Areas/admin/Views/Categories/List.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Areas/admin/Views/Categories/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Areas/admin/Views/Home/Index.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Areas/admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Areas/admin/Views/Shared/_Layout.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Areas/admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Areas/admin/_ViewImports.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Areas/admin/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Areas/admin/_ViewStart.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Areas/admin/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Areas/LandingPages/_ViewImports.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Areas/LandingPages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTGFuZGluZ1BhZ2VzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Areas/LandingPages/_ViewStart.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Areas/LandingPages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTGFuZGluZ1BhZ2VzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Views/Forms/Forms.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Views/Forms/Forms.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcRm9ybXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Views/Forms/Question.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Views/Forms/link.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcbGluay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Views/Forms/Question.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcUXVlc3Rpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Views/Home/Index.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Views/Home/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Views/Shared/Error.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Views/Users/register.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Views/Users/register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNccmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Views/_ViewImports.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Views/_ViewStart.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/abood/source/repos/Masters2/Masters2/Views/Shared/_Layout.cshtml]
+[C:/Users/ЕлшерифАлиСаадАлиБай/source/repos/Masters2/Masters2/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-a06t7yd4a8

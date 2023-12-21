@@ -4,6 +4,21 @@ namespace Masters2.Bl
 {
     public class ClsBlForms
     {
+
+        public TbForm GetById(int id)
+        {
+            try
+            {
+                Masters2Context context = new Masters2Context();
+
+                return context.TbForms.Where(a => a.FormId == id).FirstOrDefault();
+            }
+            catch 
+            {
+               return new TbForm();
+            }
+        }
+
         public bool Save(VwFormsData model)
         {
             try

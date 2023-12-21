@@ -1,0 +1,17 @@
+﻿@model VwFormsData
+
+<h1>Forms List</h1>
+
+@if (Model.QustinosList != null)
+{
+    <ul>
+        @foreach (var form in Model.QustinosList)
+        {
+            <li>
+                <a href="@Url.Action("FormView", "ControllerName", new { id = form })">
+                    View Form @form
+                </a>
+            </li>
+        }
+    </ul>
+}

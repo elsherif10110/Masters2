@@ -2,6 +2,7 @@
 
 
 <form method="post" asp-controller="Forms" asp-action="btnSaveUserAnswer" role="form">
+    <h2>@Model.tbCategory.CategoryName</h2>
 
     @for (var i = 0; i < Model.QustinosList.Count; i++)
     {
@@ -12,7 +13,6 @@
         <br />
         <hr />
     }
-
 
     <button type="submit" asp-controller="Forms" asp-action="btnSaveUserAnswers">Send</button>
 </form>
