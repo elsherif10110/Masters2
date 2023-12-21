@@ -17,7 +17,7 @@ namespace Masters2.Controllers
         public IActionResult Forms()
         {
             ClsBLQuestion question = new ClsBLQuestion();
-            ViewFormModel modelView = new ViewFormModel();
+            VwFormsData modelView = new VwFormsData();
 
             modelView.QustinosList = question.GetQustionsById(3);
 
@@ -25,31 +25,31 @@ namespace Masters2.Controllers
 
             return View(modelView);
         }
-        ///Hello Iam Edit
-        ///
-
+   
         public IActionResult btnSaveUserQustions(string qustionsRecord)
         {
 
-            ClsBLQuestion qustions = new ClsBLQuestion();
             ClsTbCategories categories = new ClsTbCategories();
+            ClsBlForms Forms = new ClsBlForms();
+            VwFormsData Model = new VwFormsData();
+
+            Model.tbCategory.CategoryName = categories.GetCategoryFromQustionRecord(qustionsRecord);
+            Model.TbQuestion.QuestionName = qustionsRecord;
+
             
 
-            string categoryName = categories.GetCategoryFromQustionRecord(qustionsRecord);
-
-
-
-            categories.Save(categoryName);
-            qustions.Save(qustionsRecord);
+            Forms.Save(Model);
 
             return RedirectToAction("");
         }
 
 
-        public IActionResult btnSaveUserAnswers(ViewFormModel qustionsRecord)
+        public IActionResult btnSaveUserAnswers(VwFormsData model)
         {
 
-           
+            ClsBLAnswers answers = new ClsBLAnswers();
+
+            answers.Save(model);
 
             return RedirectToAction("");
         }

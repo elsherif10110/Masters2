@@ -5,9 +5,9 @@ namespace Masters2.Bl
 {
     public class ClsBLAnswers
     {
-        /*public List<string> Get*/
 
-        /*public string GetAnswersRecord(List<string> answersList)
+
+        public string GetAnswersRecord(VwFormsData model)
         {
             string allQ = string.Empty;
 
@@ -15,15 +15,16 @@ namespace Masters2.Bl
             {
                 if (i != model.AnswersList.Count - 1)
                 {
-                    allQ += model.AnswersList[i] + " #//# ";
+                    allQ += model.AnswersList[i] + "/*/";
                 }
                 else
                 {
                     allQ += model.AnswersList[i];
                 }
             }
-        }*/
-        public bool Save(ViewFormModel model)
+            return allQ;
+        }
+        public bool Save(VwFormsData model)
         {
             try
             {
@@ -31,7 +32,7 @@ namespace Masters2.Bl
                 TbAnswer answer = new TbAnswer();
 
 
-
+                answer.AnswerName = GetAnswersRecord(model);
 
 
                 context.TbAnswers.Add(answer);
@@ -42,6 +43,20 @@ namespace Masters2.Bl
             catch
             {
                 return false;
+            }
+        }
+
+        public int GetLastId()
+        {
+            try
+            {
+                Masters2Context context = new Masters2Context();
+
+                return context.TbAnswers.OrderByDescending(a => a.AnswerId).FirstOrDefault().AnswerId;
+            }
+            catch
+            {
+                return -1;
             }
         }
     }

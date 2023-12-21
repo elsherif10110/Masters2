@@ -40,7 +40,19 @@ namespace Masters2.Bl
             return Qustions;
         }
 
+        public int GetLastId()
+        {
+            try
+            {
+                Masters2Context context = new Masters2Context();
 
+                return context.TbQuestions.OrderByDescending(a => a.QuestionId).FirstOrDefault().QuestionId;
+            }
+            catch
+            {
+                return -1;
+            }
+        }
 
 
         private string _SeprationQustionsFromCategoryName(string QustionRecord)

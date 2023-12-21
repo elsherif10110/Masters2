@@ -73,6 +73,20 @@ namespace Masters2.Bl
             return category;
         }
 
+        public int GetLastId()
+        {
+            try
+            {
+                Masters2Context context = new Masters2Context();
+
+                return context.TbCategories.OrderByDescending(a => a.CategoryId).FirstOrDefault().CategoryId;
+            }
+            catch
+            {
+                return - 1;
+            }
+        }
+
         public bool Dekete(int id)
         {
             try
