@@ -1,18 +1,58 @@
 ﻿@model VwFormsData
 
-
-<form method="post" asp-controller="Forms" asp-action="btnSaveUserAnswer" role="form">
+<form id="myForm" method="post" asp-controller="Forms" asp-action="btnSaveUserAnswer" role="form">
     <h2>@Model.tbCategory.CategoryName</h2>
 
     @for (var i = 0; i < Model.QustinosList.Count; i++)
     {
-
         <p>@Model.QustinosList[i]</p>
-        
         <input type="text" name="AnswersList" value="@Model.AnswersList[i]" />
         <br />
         <hr />
     }
 
-    <button type="submit" asp-controller="Forms" asp-action="btnSaveUserAnswers">Send</button>
+    <button type="button" id="sendButton">Send</button>
 </form>
+
+<script>
+    document.getElementById("sendButton").addEventListener("click", function () {
+        var confirmation = confirm("Вы уверены, что хотите отправить данные?");
+
+        if (confirmation) {
+            var form = document.getElementById("myForm");
+            form.submit();
+
+            // بعد 5 ثواني، قم بتوجيه المستخدم إلى الصفحة الرئيسية
+            setTimeout(function () {
+                window.location.href = "/Users/Login"; // قم بتغيير المسار هنا لمسار الصفحة الرئيسية الخاص بك
+            }, 30);
+        }
+    });
+</script>
+<style>
+    form {
+        text-align: left;
+        padding: 20px;
+        margin-left: 1cm;
+    }
+
+    input[type="text"] {
+        width: 400px;
+        padding: 15px; /* تم تكبير الحجم هنا */
+        margin: 10px 0; /* تم تكبير الهوامش هنا */
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button[type="button"] {
+        background-color: green;
+        color: white;
+        padding: 20px; /* تم تكبير الحجم هنا أيضًا */
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+</style>
+
+

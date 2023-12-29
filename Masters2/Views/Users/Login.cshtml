@@ -1,0 +1,71 @@
+﻿
+
+    <script>
+        function submitForm() {
+            var inRussia = document.getElementById('inRussia').checked;
+
+        if (inRussia) {
+            var message = "Соглашайтесь с положениями и условиями";
+            var confirmation = confirm(message);
+
+            if (confirmation) {
+                window.location.href = "/Home/List";
+            }
+        } else {
+            alert("Пожалуйста, согласитесь с нашими условиями и положениями.");
+        }
+        }
+    </script>
+
+    <section class="form-section">
+        <form action="/submit" method="post">
+        <label for="address">Адрес:</label><br>
+            <input type="text" id="address" name="address"><br><br>
+            <hr />
+        <label for="bankAccountNumber">Номер банковского счета:</label><br>
+            <input type="text" id="bankAccountNumber" name="bankAccountNumber"><br><br>
+        <hr />
+
+        <label for="phoneNumber">Номер телефона:</label><br>
+            <input type="text" id="phoneNumber" name="phoneNumber"><br><br>
+        <hr />
+
+            <input type="checkbox" id="inRussia" name="inRussia">
+        <label for="inRussia">Я согласен на обработку данных</label><br><br>
+
+            <input type="button" value="Submit" onclick="submitForm()">
+        </form>
+    </section>
+
+<style>
+    .form-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    form {
+        text-align: left;
+        padding: 20px;
+        margin-left: 1cm;
+    }
+
+    input[type="text"] {
+        width: 300px;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box; /* يضمن حساب الحجم بما يتناسب مع التبديلات */
+    }
+
+    input[type="button"] {
+        background-color: green;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
