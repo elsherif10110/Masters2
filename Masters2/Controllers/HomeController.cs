@@ -15,7 +15,7 @@ namespace Masters2.Controllers
             _logger = logger;
         }
 
-
+/*
         public IActionResult Link()
         {
           
@@ -58,7 +58,7 @@ namespace Masters2.Controllers
         public IActionResult Privacy()
         {
             return View();
-        }
+        }*/
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

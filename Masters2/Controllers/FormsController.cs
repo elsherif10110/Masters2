@@ -14,7 +14,7 @@ namespace Masters2.Controllers
             return View();
         }
         
-
+/*
         public IActionResult Forms()
         {
             ClsBLQuestion question = new ClsBLQuestion();
@@ -54,6 +54,6 @@ namespace Masters2.Controllers
             answers.Save(model);
 
             return RedirectToAction("");
-        }
+        }*/
     }
 }

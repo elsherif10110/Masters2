@@ -10,7 +10,7 @@ namespace Masters.Areas.admin.Controllers
 
     public class CategoriesController : Controller
     {
-
+/*
         public IActionResult List()
         {
             Masters2Context context = new Masters2Context();
@@ -56,7 +56,7 @@ namespace Masters.Areas.admin.Controllers
 
 
         }
-
+*/
 
     }
 }

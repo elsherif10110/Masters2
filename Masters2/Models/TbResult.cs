@@ -1,21 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
+
+
 namespace Masters2.Models
 {
     public partial class TbResult
     {
-        public TbResult()
-        {
-            TbForms = new HashSet<TbForm>();
-        }
-
         public int ResultId { get; set; }
-        public string? ResultName { get; set; }
-        public int? UserId { get; set; }
-        public int? AdminId { get; set; }
+        public int? FormId { get; set; }
+        public string? AnswersString { get; set; }
         public DateTime? AnswerDate { get; set; }
-
-        public virtual ICollection<TbForm> TbForms { get; set; }
+        public int? AnswersUserId { get; set; }
     }
 }
