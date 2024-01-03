@@ -1,5 +1,13 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using System.Net;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.Cookies;
+
+using Masters2.Models;
+
 
 // إعداد الخيارات الخاصة بالشهادة
 ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, sslPolicyErrors) => true;
@@ -11,6 +19,20 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<FormsContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+{
+    options.Password.RequiredLength = 8;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireUppercase = true;
+    options.User.RequireUniqueEmail = true;
+}).AddEntityFrameworkStores<FormsContext>();
+
+
+
+
 
 
 //***********************************
@@ -34,6 +56,7 @@ app.UseStaticFiles();
 // to Use routing
 app.UseRouting();
 
+app.UseAuthentication();
 //********************************
 //to use authorization
 app.UseAuthorization();
